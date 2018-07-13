@@ -13,9 +13,9 @@ There is no convenient way for event attendees to suggest music to the DJ.
 ## Timeline
 ### Week 1
 - __Grab users' spotify api key__
-- Users can search Spotify songs
-- __Backend model/endpoints (except voting)__
 - Join/host flow (placeholder)
+- __Backend model/endpoints (except voting)__
+- Users can search Spotify songs
 ### Week 2
 - Users can add searched songs to pool
 - DJ can move songs from pool to queue
