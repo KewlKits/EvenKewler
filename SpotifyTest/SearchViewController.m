@@ -8,6 +8,8 @@
 
 #import "SearchViewController.h"
 #import "SearchCell.h"
+#import <Unirest/UNIRest.h>
+#import "SpotifyDataManager.h"
 @interface SearchViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -19,7 +21,9 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    // Do any additional setup after loading the view.
+    [SpotifyDataManager searchSpotify:@"Bound 2" withCompletion:^(NSDictionary *response) {
+        NSLog(@"%@", response);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

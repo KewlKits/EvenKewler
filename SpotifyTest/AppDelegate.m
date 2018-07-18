@@ -81,8 +81,13 @@
             if (session) {
                 // login to the player
                 [self.player loginWithAccessToken:self.auth.session.accessToken];
+                NSLog(@"ACCESS TOKEN: ");
+                NSLog(@"%@", self.auth.session.accessToken);
+                NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setObject:self.auth.session.accessToken forKey:@"accessToken"];
             }
         }];
+
         return YES;
     }
     return NO;
